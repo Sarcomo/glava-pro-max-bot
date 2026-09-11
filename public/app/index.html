@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Каталог — ПСК «ГЛАВА»</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://st.max.ru/js/max-web-app.js"></script>
+  <style>
+    :root, [data-theme="light"] {
+      --bg: #f5f5f5;
+      --surface: #ffffff;
+      --ink: #2a2420;
+      --muted: #8a817a;
+      --label: #a59c95;
+      --accent: #f15a29;
+      --accent-press: #dc4d20;
+      --soft: #f7e5dd;
+      --soft-text: #e85a2a;
+      --chip: #ffffff;
+      --chip-border: #e8e2dc;
+      --chip-active-bg: #f7e5dd;
+      --chip-active-text: #e85a2a;
+      --line: #ebe4df;
+      --shadow: none;
+      --overlay: rgba(20, 16, 14, 0.45);
+      --sheet: #ffffff;
+      --input-bg: #f5f2ef;
+      --dot: #d8d0c9;
+      --dot-on: #3a342f;
+      --geo-bg: rgba(25, 20, 17, 0.38);
+      --safe-b: env(safe-area-inset-bottom, 0px);
+      --safe-t: env(safe-area-inset-top, 0px);
+    }
+    [data-theme="dark"] {
+      --bg: #1b1b1b;
+      --surface: #141414;
+      --ink: #f4efe9;
+      --muted: #9a9189;
+      --label: #7a726b;
+      --accent: #e65c2e;
+      --accent-press: #cf4f24;
+      --soft: #2a2420;
+      --soft-text: #e65c2e;
+      --chip: #221e1b;
+      --chip-border: #3a342f;
+      --chip-active-bg: #e65c2e;
+      --chip-active-text: #ffffff;
+      --line: #3a342f;
+      --shadow: none;
+      --overlay: rgba(0,0,0,.55);
+      --sheet: #141414;
+      --input-bg: #2a2522;
+      --dot: #4a433c;
+      --dot-on: #ffffff;
+      --geo-bg: rgba(12, 10, 8, 0.45);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Montserrat, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: calc(12px + var(--safe-t)) 16px calc(28px + var(--safe-b));
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .topbar {
+      position: relative;
+      text-align: center;
+      padding: 8px 44px 4px;
+      margin-bottom: 18px;
+    }
+    .theme-btn {
+      position: absolute; top: 0; right: 0;
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 0; padding: 0; background: transparent;
+      cursor: pointer; display: grid; place-items: center;
+      overflow: hidden;
+    }
+    .theme-btn img {
+      width: 40px; height: 40px; display: block;
+      object-fit: cover;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 26px;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+      white-space: nowrap;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .lead span {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .filters {
+      display: flex;
+      gap: 6px;
+      padding: 4px 0 20px;
+      width: 100%;
+    }
+    .chip {
+      flex: 1 1 0;
+      min-width: 0;
+      border: 1px solid var(--chip-border);
+      background: var(--chip);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 10px 6px;
+      font: inherit; font-size: 13px; font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .chip.active {
+      background: var(--chip-active-bg);
+      border-color: transparent;
+      color: var(--chip-active-text);
+      font-weight: 600;
+    }
+
+    .list { display: grid; gap: 28px; }
+
+    .card {
+      background: var(--surface);
+      border-radius: 15px;
+      overflow: hidden;
+      padding-bottom: 15px;
+    }
+
+    .carousel {
+      position: relative;
+      margin: 5px 5px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #2b2420;
+      touch-action: pan-y;
+    }
+    .track {
+      display: flex;
+      transition: transform .28s ease;
+      will-change: transform;
+    }
+    .slide {
+      flex: 0 0 100%;
+      aspect-ratio: 16/11;
+    }
+    .slide img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      pointer-events: none; user-select: none;
+    }
+    .geo {
+      position: absolute; left: 12px; right: 12px; bottom: 12px;
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 12px; border-radius: 14px;
+      background: var(--geo-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      color: #fff; text-align: left; cursor: pointer;
+      border: 0; width: calc(100% - 24px);
+      font: inherit;
+    }
+    .geo .geo-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      flex: 0 0 auto; margin-top: 0;
+      object-fit: cover; display: block;
+    }
+    .geo strong {
+      display: block; font-size: 13px; font-weight: 700; line-height: 1.25;
+      margin-bottom: 2px;
+    }
+    .geo span {
+      display: block; font-size: 12px; font-weight: 450; line-height: 1.3;
+      opacity: .95;
+    }
+
+    .dots {
+      display: flex; justify-content: center; align-items: center;
+      gap: 6px; margin: 12px 0 14px; min-height: 8px;
+    }
+    .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--dot); border: 0; padding: 0; cursor: pointer;
+    }
+    .dot.on {
+      width: 7px; height: 7px;
+      background: var(--dot-on);
+    }
+
+    .card-body { padding: 0 15px; }
+    .card h2 {
+      font-size: 24px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 8px;
+    }
+    .desc {
+      color: var(--muted); font-size: 14px; line-height: 1.45; margin-bottom: 14px;
+    }
+
+    .review {
+      background: var(--soft);
+      border-radius: 16px;
+      padding: 14px 14px 16px;
+      margin-bottom: 16px;
+    }
+    .review-top {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 10px; margin-bottom: 8px;
+    }
+    .review-name { color: var(--soft-text); font-weight: 700; font-size: 14px; }
+    .stars { color: var(--accent); font-size: 13px; letter-spacing: 1px; }
+    .review p { font-size: 14px; line-height: 1.45; color: var(--ink); }
+
+    .stats {
+      display: grid; grid-template-columns: 1fr 1.15fr 1.2fr;
+      margin-bottom: 18px;
+    }
+    .stat { text-align: center; padding: 0 8px; }
+    .stat + .stat { border-left: 1px solid var(--line); }
+    .stat span {
+      display: block; font-size: 10px; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase; color: var(--label);
+      margin-bottom: 6px; line-height: 1.25; min-height: 2.5em;
+    }
+    .stat strong {
+      font-size: 15px; font-weight: 700; line-height: 1.25; display: block;
+    }
+
+    .actions { display: grid; gap: 10px; }
+    .btn {
+      width: 100%; border-radius: 20px; padding: 15px 16px;
+      font: inherit; font-size: 15px; font-weight: 700;
+      cursor: pointer; border: 1.5px solid transparent;
+    }
+    .btn:disabled { opacity: .6; cursor: wait; }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-primary:active { background: var(--accent-press); }
+    .btn-secondary {
+      background: transparent; color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .footer {
+      margin-top: 28px; text-align: center; color: var(--label); font-size: 12px;
+    }
+
+    .backdrop {
+      position: fixed; inset: 0; background: var(--overlay);
+      opacity: 0; pointer-events: none; transition: .2s ease; z-index: 40;
+    }
+    .backdrop.open { opacity: 1; pointer-events: auto; }
+    .sheet {
+      position: fixed; left: 0; right: 0; bottom: 0;
+      background: var(--sheet);
+      border-radius: 28px 28px 0 0;
+      transform: translateY(110%);
+      transition: transform .28s cubic-bezier(.2,.8,.2,1);
+      z-index: 50;
+      padding: 12px 18px calc(18px + var(--safe-b));
+      box-shadow: 0 -10px 40px rgba(0,0,0,.15);
+    }
+    .sheet.open { transform: translateY(0); }
+    .handle {
+      width: 42px; height: 4px; border-radius: 99px; background: var(--line);
+      margin: 4px auto 14px;
+    }
+    .sheet h3 {
+      font-size: 22px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 4px;
+    }
+    .sheet .sub { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+    label {
+      display: block; font-size: 12px; font-weight: 600; color: var(--label);
+      margin: 0 0 6px; letter-spacing: .04em; text-transform: uppercase;
+    }
+    input {
+      width: 100%; border: 0; border-radius: 16px; background: var(--input-bg);
+      color: var(--ink); font: inherit; font-size: 16px; padding: 14px 16px;
+      margin-bottom: 12px; outline: none;
+    }
+    .sheet-actions { display: grid; gap: 10px; margin-top: 6px; }
+    .err {
+      color: #c0392b; font-size: 13px; margin: -4px 0 10px; min-height: 18px;
+    }
+    .toast {
+      position: fixed; left: 16px; right: 16px; bottom: calc(24px + var(--safe-b));
+      background: #1f1a17; color: #fff; border-radius: 16px; padding: 14px 16px;
+      font-size: 14px; font-weight: 600; z-index: 60;
+      transform: translateY(140%); transition: .25s ease; text-align: center;
+    }
+    .toast.show { transform: translateY(0); }
+    [data-theme="dark"] .toast { background: #3a312c; }
+
+    @media (min-width: 720px) {
+      body { max-width: 430px; margin: 0 auto; }
+      .sheet { left: 50%; right: auto; width: min(430px, 100%); transform: translate(-50%, 110%); }
+      .sheet.open { transform: translate(-50%, 0); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Тема">
+      <img id="themeIcon" src="./icons/theme-dark.png" alt="">
+    </button>
+    <div class="eyebrow">Каталог</div>
+    <h1>Готовые проекты</h1>
+    <p class="lead">
+      <span>Подборка наших проектов которые уже</span>
+      <span>построены, каждый проект подкрепляется</span>
+      <span>отзывом настоящего клиента.</span>
+    </p>
+  </header>
+
+  <div class="filters" id="filters">
+    <button type="button" class="chip active" data-filter="all">Все</button>
+    <button type="button" class="chip" data-filter="small">до 70 м²</button>
+    <button type="button" class="chip" data-filter="mid">70-100 м²</button>
+    <button type="button" class="chip" data-filter="large">от 100 м²</button>
+  </div>
+
+  <div class="list" id="list"></div>
+  <p class="footer">ПСК «ГЛАВА» · +7 (924) 533-56-66</p>
+
+  <div class="backdrop" id="backdrop"></div>
+  <section class="sheet" id="sheet" aria-hidden="true">
+    <div class="handle"></div>
+    <h3 id="sheetTitle">Заявка</h3>
+    <p class="sub" id="sheetSub"></p>
+    <label for="name">Имя</label>
+    <input id="name" type="text" placeholder="Как к вам обращаться" autocomplete="name">
+    <label for="phone">Телефон</label>
+    <input id="phone" type="tel" placeholder="+7 999 123-45-67" autocomplete="tel">
+    <div class="err" id="formErr"></div>
+    <div class="sheet-actions">
+      <button type="button" class="btn btn-primary" id="submitBtn">Отправить заявку</button>
+      <button type="button" class="btn btn-secondary" id="cancelBtn">Отмена</button>
+    </div>
+  </section>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    let projects = [];
+    const listEl = document.getElementById('list');
+    const sheet = document.getElementById('sheet');
+    const backdrop = document.getElementById('backdrop');
+    const toast = document.getElementById('toast');
+    const formErr = document.getElementById('formErr');
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const submitBtn = document.getElementById('submitBtn');
+
+    let activeFilter = 'all';
+    let pending = null;
+    const slideIndex = {};
+
+    function layoutLabel(p) {
+      const floor = String(p.floors || '').replace(/\s+/g, ' ').trim();
+      return `${floor}, ${p.bedrooms}сп.`;
+    }
+
+    function getWebUser() {
+      const wa = window.WebApp || window.MaxWebApp || null;
+      const unsafe = wa?.initDataUnsafe || {};
+      const user = unsafe.user || null;
+      return {
+        id: user?.id || user?.user_id || null,
+        name: [user?.first_name, user?.last_name].filter(Boolean).join(' ').trim() || user?.name || '',
+      };
+    }
+
+    function openLink(url) {
+      const wa = window.WebApp;
+      if (wa && typeof wa.openLink === 'function') return wa.openLink(url);
+      window.open(url, '_blank');
+    }
+
+    function matchFilter(p) {
+      if (activeFilter === 'small') return p.area < 70;
+      if (activeFilter === 'mid') return p.area >= 70 && p.area < 100;
+      if (activeFilter === 'large') return p.area >= 100;
+      return true;
+    }
+
+    function showToast(text) {
+      toast.textContent = text;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3200);
+    }
+
+    function openSheet(project, action) {
+      pending = { project, action };
+      const title = action === 'excursion' ? 'Бесплатная экскурсия' : 'Написать менеджеру';
+      document.getElementById('sheetTitle').textContent = title;
+      document.getElementById('sheetSub').textContent = `Проект «${project.name}» — заявка уйдёт менеджеру в бот`;
+      formErr.textContent = '';
+      const webUser = getWebUser();
+      if (webUser.name && !nameInput.value) nameInput.value = webUser.name;
+      sheet.classList.add('open');
+      backdrop.classList.add('open');
+      sheet.setAttribute('aria-hidden', 'false');
+      setTimeout(() => (nameInput.value ? phoneInput : nameInput).focus(), 250);
+    }
+
+    function closeSheet() {
+      sheet.classList.remove('open');
+      backdrop.classList.remove('open');
+      sheet.setAttribute('aria-hidden', 'true');
+      pending = null;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Отправить заявку';
+    }
+
+    async function submitLead() {
+      if (!pending) return;
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      formErr.textContent = '';
+      if (name.length < 2) {
+        formErr.textContent = 'Укажите имя';
+        return;
+      }
+      if (phone.replace(/\D/g, '').length < 10) {
+        formErr.textContent = 'Укажите телефон';
+        return;
+      }
+
+      const { project, action } = pending;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Отправляем…';
+
+      try {
+        const webUser = getWebUser();
+        const res = await fetch('/app/api/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action,
+            projectId: project.id,
+            projectName: project.name,
+            name,
+            phone,
+            userId: webUser.id,
+            location: project.location,
+            area: project.area,
+            floors: project.floors,
+            bedrooms: project.bedrooms,
+            realCostLabel: project.realCostLabel,
+          }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) {
+          const map = {
+            name_required: 'Укажите имя',
+            phone_required: 'Укажите корректный телефон',
+          };
+          formErr.textContent = map[data.error] || 'Не удалось отправить. Попробуйте ещё раз';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Отправить заявку';
+          return;
+        }
+        closeSheet();
+        showToast(data.message || 'Заявка отправлена');
+      } catch (err) {
+        formErr.textContent = 'Нет связи с сервером';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Отправить заявку';
+      }
+    }
+
+    function setSlide(projectId, index) {
+      const card = listEl.querySelector(`[data-card="${projectId}"]`);
+      if (!card) return;
+      const photos = projects.find((p) => p.id === projectId)?.photos || [];
+      const max = Math.max(photos.length, 1);
+      const next = ((index % max) + max) % max;
+      slideIndex[projectId] = next;
+      const track = card.querySelector('.track');
+      if (track) track.style.transform = `translateX(-${next * 100}%)`;
+      card.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('on', i === next));
+    }
+
+    function bindCarousel(card, projectId) {
+      const viewport = card.querySelector('.carousel');
+      if (!viewport) return;
+      let startX = 0;
+      let startY = 0;
+      let locked = null;
+
+      viewport.addEventListener('touchstart', (e) => {
+        const t = e.changedTouches[0];
+        startX = t.clientX;
+        startY = t.clientY;
+        locked = null;
+      }, { passive: true });
+
+      viewport.addEventListener('touchmove', (e) => {
+        if (locked === 'v') return;
+        const t = e.changedTouches[0];
+        const dx = t.clientX - startX;
+        const dy = t.clientY - startY;
+        if (locked === null && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
+          locked = Math.abs(dx) > Math.abs(dy) ? 'h' : 'v';
+        }
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', (e) => {
+        if (locked !== 'h') return;
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) < 40) return;
+        const cur = slideIndex[projectId] || 0;
+        setSlide(projectId, dx < 0 ? cur + 1 : cur - 1);
+      }, { passive: true });
+    }
+
+    function render() {
+      const items = projects.filter(matchFilter);
+      if (!items.length) {
+        listEl.innerHTML = '<p class="footer" style="margin-top:8px">Пока нет проектов в этой категории</p>';
+        return;
+      }
+      listEl.innerHTML = items.map((p) => {
+        const photos = (p.photos && p.photos.length ? p.photos : ['']).slice(0, 5);
+        const idx = slideIndex[p.id] || 0;
+        return `
+        <article class="card" data-card="${p.id}">
+          <div class="carousel">
+            <div class="track" style="transform:translateX(-${idx * 100}%)">
+              ${photos.map((src) => `
+                <div class="slide"><img src="${src}" alt="${p.name}" loading="lazy"></div>
+              `).join('')}
+            </div>
+            <button type="button" class="geo" data-maps="${p.mapsUrl}">
+              <img class="geo-icon" src="./icons/geo.png" alt="">
+              <span>
+                <strong>Геометка объекта</strong>
+                <span>${p.location}</span>
+              </span>
+            </button>
+          </div>
+          <div class="dots">
+            ${photos.map((_, i) => `<button type="button" class="dot${i === idx ? ' on' : ''}" data-slide="${p.id}" data-i="${i}" aria-label="Фото ${i + 1}"></button>`).join('')}
+          </div>
+          <div class="card-body">
+            <h2>${p.name}</h2>
+            <p class="desc">${p.description}</p>
+            <div class="review">
+              <div class="review-top">
+                <span class="review-name">${p.review.author}</span>
+                <span class="stars">${'★'.repeat(p.review.rating || 5)}</span>
+              </div>
+              <p>${p.review.text}</p>
+            </div>
+            <div class="stats">
+              <div class="stat"><span>Площадь</span><strong>${p.area} м²</strong></div>
+              <div class="stat"><span>Планировка</span><strong>${layoutLabel(p)}</strong></div>
+              <div class="stat"><span>Финальная<br>стоимость</span><strong>${p.realCostLabel}</strong></div>
+            </div>
+            <div class="actions">
+              <button type="button" class="btn btn-primary" data-action="excursion" data-id="${p.id}">Бесплатная экскурсия</button>
+              <button type="button" class="btn btn-secondary" data-action="manager" data-id="${p.id}">Написать менеджеру</button>
+            </div>
+          </div>
+        </article>`;
+      }).join('');
+
+      listEl.querySelectorAll('[data-card]').forEach((card) => {
+        bindCarousel(card, card.dataset.card);
+      });
+    }
+
+    listEl.addEventListener('click', (e) => {
+      const dot = e.target.closest('[data-slide]');
+      if (dot) {
+        setSlide(dot.dataset.slide, Number(dot.dataset.i));
+        return;
+      }
+      const geo = e.target.closest('[data-maps]');
+      if (geo) {
+        openLink(geo.dataset.maps);
+        return;
+      }
+      const btn = e.target.closest('button[data-action]');
+      if (!btn) return;
+      const project = projects.find((p) => p.id === btn.dataset.id);
+      if (!project) return;
+      openSheet(project, btn.dataset.action);
+    });
+
+    document.getElementById('filters').addEventListener('click', (e) => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      document.querySelectorAll('.chip').forEach((c) => c.classList.toggle('active', c === chip));
+      activeFilter = chip.dataset.filter;
+      render();
+    });
+
+    backdrop.addEventListener('click', closeSheet);
+    document.getElementById('cancelBtn').addEventListener('click', closeSheet);
+    submitBtn.addEventListener('click', submitLead);
+    phoneInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') submitLead();
+    });
+
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeBtn');
+    const themeIcon = document.getElementById('themeIcon');
+
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('glava-catalog-theme', theme);
+      // в светлой теме — луна (переключить на тёмную), в тёмной — солнце
+      themeIcon.src = theme === 'dark'
+        ? './icons/theme-light.png'
+        : './icons/theme-dark.png';
+      themeIcon.alt = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема';
+    }
+
+    const saved = localStorage.getItem('glava-catalog-theme');
+    applyTheme(saved === 'dark' || saved === 'light' ? saved : 'light');
+    themeBtn.addEventListener('click', () => {
+      applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+
+    render();
+    if (window.WebApp?.ready) window.WebApp.ready();
+
+    (async function loadProjects() {
+      try {
+        const res = await fetch('/app/api/projects', { cache: 'no-store' });
+        const data = await res.json();
+        if (data.ok && Array.isArray(data.projects)) {
+          projects = data.projects;
+          render();
+        }
+      } catch (err) {
+        listEl.innerHTML = '<p class="footer">Не удалось загрузить каталог</p>';
+      }
+    })();
+  </script>
+</body>
+</html>

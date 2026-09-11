@@ -1,0 +1,74 @@
+=== 0: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 1: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="left"/><w:rPr><w:rFonts w:ascii="Arial" w:eastAsia="Arial" w:hAnsi="Arial" w:cs="Arial"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="ru-RU"/></w:rPr></w:pPr>
+
+=== 2: Министерство образования и науки Российской Федерации
+<w:pPr><w:keepNext/><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 3: федеральное государственное бюджетное образовательное учреждение
+<w:pPr><w:keepNext/><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 4: высшего образования
+<w:pPr><w:keepNext/><w:widowControl w:val="0"/><w:tabs><w:tab w:val="left" w:pos="2010"/><w:tab w:val="center" w:pos="5284"/></w:tabs><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 5: «Иркутский государственный университет»
+<w:pPr><w:keepNext/><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 6: (ФГБОУ ВО «ИГУ»)
+<w:pPr><w:keepNext/><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 7: Факультет бизнес-коммуникаций и информатики
+<w:pPr><w:keepNext/><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 8: Кафедра естественнонаучных дисциплин
+<w:pPr><w:keepNext/><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 9: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 10: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="left"/></w:pPr>
+
+=== 11: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 12: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 13: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 14: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 15: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 16: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 17: ОТЧЕТ ПО УЧЕБНОЙ ПРАКТИКЕ
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 18: Б2.В.03(У) Научно-исследовательская работа 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/><w:rPr><w:b/><w:bCs/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:pPr>
+
+=== 19: (получение первичных навыков научно-исследовательской работы)
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/><w:rPr><w:b/><w:bCs/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:pPr>
+
+=== 20: по направлению 09.03.03 «Прикладная информатика»(прикладной бакалавриат)
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/><w:rPr><w:b/><w:bCs/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:pPr>
+
+=== 21: Профиль «Прикладная информатика в дизайне»
+<w:pPr><w:widowControl w:val="0"/><w:tabs><w:tab w:val="left" w:pos="10080"/></w:tabs><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr>
+
+=== 22: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 23: 
+<w:pPr><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="center"/></w:pPr>
+
+=== 24: 
+<w:pPr><w:widowControl w:val="0"/><w:spacing w:line="240" w:lineRule="auto"/><w:jc w:val="center"/></w:pPr>

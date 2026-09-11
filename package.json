@@ -1,0 +1,21 @@
+{
+  "name": "glava-pro-max-bot",
+  "version": "1.0.0",
+  "description": "MAX chat-bot for Глава Про (sip.glava.pro) — lead qualification, catalog, cost calculator",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "register-webhook": "node scripts/register-webhook.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^144.0.0",
+    "multer": "^2.3.0"
+  }
+}

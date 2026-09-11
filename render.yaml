@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: glava-pro-max-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: MAX_BOT_TOKEN
+        sync: false
+      - key: MAX_WEBHOOK_SECRET
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
+      - key: MANAGER_PHONE
+        value: "+7 (XXX) XXX-XX-XX"
+      - key: MANAGER_EMAIL
+        value: "info@sip.glava.pro"
+      - key: SITE_URL
+        value: "https://sip.glava.pro"
+      - key: LEADS_STORAGE
+        value: "json"

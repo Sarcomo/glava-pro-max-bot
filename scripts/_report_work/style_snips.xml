@@ -1,0 +1,29 @@
+<w:style w:type="paragraph" w:styleId="1"><w:name w:val="heading 1"/><w:basedOn w:val="a"/><w:next w:val="a"/><w:link w:val="10"/><w:uiPriority w:val="9"/><w:qFormat/><w:rsid w:val="004B2F40"/><w:pPr><w:keepNext/><w:keepLines/><w:ind w:firstLine="0"/><w:jc w:val="center"/><w:outlineLvl w:val="0"/></w:pPr><w:rPr><w:b/><w:bCs/><w:smallCaps/></w:rPr></w:style>
+
+----
+
+<w:style w:type="paragraph" w:styleId="2"><w:name w:val="heading 2"/><w:basedOn w:val="a"/><w:next w:val="a"/><w:link w:val="20"/><w:uiPriority w:val="9"/><w:unhideWhenUsed/><w:qFormat/><w:rsid w:val="00874BAF"/><w:pPr><w:keepNext/><w:keepLines/><w:numPr><w:ilvl w:val="1"/><w:numId w:val="19"/></w:numPr><w:ind w:left="0" w:firstLine="720"/><w:outlineLvl w:val="1"/></w:pPr><w:rPr><w:b/><w:bCs/><w:highlight w:val="none"/><w:lang w:val="ru-RU"/></w:rPr></w:style>
+
+----
+
+<w:style w:type="paragraph" w:styleId="11"><w:name w:val="toc 1"/><w:autoRedefine/><w:uiPriority w:val="39"/><w:unhideWhenUsed/><w:rsid w:val="0052252D"/><w:pPr><w:tabs><w:tab w:val="right" w:leader="dot" w:pos="9631"/></w:tabs><w:spacing w:after="100"/><w:ind w:firstLine="0"/></w:pPr></w:style>
+
+----
+
+<w:style w:type="paragraph" w:styleId="21"><w:name w:val="toc 2"/><w:autoRedefine/><w:uiPriority w:val="39"/><w:unhideWhenUsed/><w:rsid w:val="0014124D"/><w:pPr><w:tabs><w:tab w:val="right" w:leader="dot" w:pos="9631"/></w:tabs><w:ind w:left="709" w:firstLine="11"/></w:pPr></w:style>
+
+----
+
+<w:style w:type="paragraph" w:styleId="a9"><w:name w:val="List Paragraph"/><w:uiPriority w:val="34"/><w:qFormat/><w:rsid w:val="00F3718F"/><w:pPr><w:ind w:left="720"/><w:contextualSpacing/></w:pPr></w:style>
+
+----
+
+<w:style w:type="paragraph" w:styleId="aa"><w:name w:val="caption"/><w:uiPriority w:val="35"/><w:unhideWhenUsed/><w:qFormat/><w:rsid w:val="0028442D"/><w:pPr><w:spacing w:after="200" w:line="240" w:lineRule="auto"/><w:jc w:val="center"/></w:pPr><w:rPr><w:iCs/><w:szCs w:val="18"/></w:rPr></w:style>
+
+----
+
+<w:style w:type="paragraph" w:styleId="a3"><w:name w:val="Title"/><w:basedOn w:val="a"/><w:next w:val="a"/><w:uiPriority w:val="10"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:after="60"/></w:pPr><w:rPr><w:sz w:val="52"/><w:szCs w:val="52"/></w:rPr></w:style>
+
+----
+
+missing Normal

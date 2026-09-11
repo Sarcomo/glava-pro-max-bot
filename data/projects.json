@@ -1,0 +1,209 @@
+[
+  {
+    "id": "chernorud",
+    "name": "Черноруд",
+    "area": 46,
+    "floors": "1 этаж",
+    "bedrooms": 2,
+    "priceFrom": 4500000,
+    "realCost": 4720000,
+    "priceLabel": "от 4 500 000 ₽",
+    "realCostLabel": "4 720 000 ₽",
+    "location": "Иркутская область, пос. Черноруд",
+    "mapsUrl": "https://yandex.ru/maps/?pt=104.348,52.045&z=14&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/chernorud",
+    "photos": [
+      "media/chernorud.jpg"
+    ],
+    "description": "Построили компактный дом из бруса вакуумной сушки: потолки 3 м, панорамные окна, 2 спальни и кухня-гостиная.",
+    "review": {
+      "author": "Анна К.",
+      "text": "Построили быстро. Дом тёплый, менеджер всегда на связи. Соседи уже спрашивают, кто построил.",
+      "rating": 5
+    }
+  },
+  {
+    "id": "sobol",
+    "name": "Соболь",
+    "area": 60,
+    "floors": "1 этаж",
+    "bedrooms": 2,
+    "priceFrom": 4950000,
+    "realCost": 5180000,
+    "priceLabel": "от 4 950 000 ₽",
+    "realCostLabel": "5 180 000 ₽",
+    "location": "Иркутск, ул. Байкальская (образец)",
+    "mapsUrl": "https://yandex.ru/maps/?pt=104.296,52.275&z=14&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/sobol",
+    "photos": [
+      "media/sobol.jpg"
+    ],
+    "description": "Классика из бруса: кухня-гостиная, 2 спальни, 6-камерное остекление и дверь с терморазрывом.",
+    "review": {
+      "author": "Дмитрий С.",
+      "text": "Смета совпала с финалом. Окна «графит» смотрятся дорого, зимой держит тепло.",
+      "rating": 5
+    }
+  },
+  {
+    "id": "arshan",
+    "name": "Аршан",
+    "area": 69,
+    "floors": "2 этажа",
+    "bedrooms": 2,
+    "priceFrom": 3990000,
+    "realCost": 4210000,
+    "priceLabel": "от 3 990 000 ₽",
+    "realCostLabel": "4 210 000 ₽",
+    "location": "г. Байкальск, выставочный дом",
+    "mapsUrl": "https://yandex.ru/maps/?pt=104.156,51.518&z=13&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/arshan",
+    "photos": [
+      "media/arshan.jpg"
+    ],
+    "description": "Авторский 6×6: брус + мансарда, кабинет, чердак, ЖБ-плита и лестница в комплекте.",
+    "review": {
+      "author": "Елена М.",
+      "text": "Брали с тёплым контуром 2-го этажа. Для молодой семьи — идеальный метраж.",
+      "rating": 5
+    }
+  },
+  {
+    "id": "mamay",
+    "name": "Мамай",
+    "area": 76,
+    "floors": "2 этажа",
+    "bedrooms": 2,
+    "priceFrom": 5400000,
+    "realCost": 5850000,
+    "priceLabel": "от 5 400 000 ₽",
+    "realCostLabel": "5 850 000 ₽",
+    "location": "Слюдянский район, пос. Мангутай",
+    "mapsUrl": "https://yandex.ru/maps/?pt=103.698,51.678&z=13&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/mamay",
+    "photos": [
+      "media/mamay.jpg"
+    ],
+    "description": "Современный дом с террасой, мансардой 24 м² и панорамными окнами «графит».",
+    "review": {
+      "author": "Игорь В.",
+      "text": "Фото как вживую. Приезжали смотреть — по геометке доехали без проблем.",
+      "rating": 5
+    }
+  },
+  {
+    "id": "oymur",
+    "name": "Оймур",
+    "area": 89,
+    "floors": "2 этажа",
+    "bedrooms": 3,
+    "priceFrom": 5850000,
+    "realCost": 6240000,
+    "priceLabel": "от 5 850 000 ₽",
+    "realCostLabel": "6 240 000 ₽",
+    "location": "Кабанский район, с. Оймур",
+    "mapsUrl": "https://yandex.ru/maps/?pt=106.998,52.178&z=13&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/oymur",
+    "photos": [
+      "media/oymur.jpg"
+    ],
+    "description": "Классика у Байкала: 3 спальни, потолки 3 м, панорамное остекление.",
+    "review": {
+      "author": "Мария П.",
+      "text": "Реальная стоимость вышла близко к расчёту. Качество бруса отличное.",
+      "rating": 5
+    }
+  },
+  {
+    "id": "sarma",
+    "name": "Сарма",
+    "area": 92,
+    "floors": "2 этажа",
+    "bedrooms": 5,
+    "priceFrom": 5050000,
+    "realCost": 5520000,
+    "priceLabel": "от 5 050 000 ₽",
+    "realCostLabel": "5 520 000 ₽",
+    "location": "Ольхонский район, направление Сарма",
+    "mapsUrl": "https://yandex.ru/maps/?pt=104.918,53.102&z=12&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/sarma",
+    "photos": [
+      "media/sarma.jpg"
+    ],
+    "description": "Формат 6×8 для большой семьи: 5 спален, кухня-гостиная, чердак.",
+    "review": {
+      "author": "Сергей Н.",
+      "text": "Пять спален — то, что искали. Сборка быстрая, участок рядом с дорогой.",
+      "rating": 5
+    }
+  },
+  {
+    "id": "kotokel",
+    "name": "Котокель",
+    "area": 96,
+    "floors": "2 этажа",
+    "bedrooms": 3,
+    "priceFrom": 6200000,
+    "realCost": 6580000,
+    "priceLabel": "от 6 200 000 ₽",
+    "realCostLabel": "6 580 000 ₽",
+    "location": "оз. Котокель, выезд из Усть-Орды",
+    "mapsUrl": "https://yandex.ru/maps/?pt=105.598,52.812&z=12&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/kotokel",
+    "photos": [
+      "media/kotokel.jpg"
+    ],
+    "description": "Авторский дом: кухня-гостиная 27 м², лофт 18 м², графитовое остекление.",
+    "review": {
+      "author": "Ольга Т.",
+      "text": "Лофт стал кабинетом. Свет в гостиной — огонь. Рекомендую смотреть объект лично.",
+      "rating": 5
+    }
+  },
+  {
+    "id": "dulaan",
+    "name": "Дулаан",
+    "area": 104,
+    "floors": "2 этажа",
+    "bedrooms": 3,
+    "priceFrom": 6480000,
+    "realCost": 6910000,
+    "priceLabel": "от 6 480 000 ₽",
+    "realCostLabel": "6 910 000 ₽",
+    "location": "Иркутский район, д. Патроны",
+    "mapsUrl": "https://yandex.ru/maps/?pt=104.148,52.198&z=13&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/dulaan",
+    "photos": [
+      "media/dulaan.jpg"
+    ],
+    "description": "Новая классика: кухня-гостиная 40 м², брус 170 мм, ЖБ-плита.",
+    "review": {
+      "author": "Алексей Р.",
+      "text": "Большая гостиная оправдала ожидания. Финальная цена — как в договоре.",
+      "rating": 5
+    }
+  },
+  {
+    "id": "olkhon",
+    "name": "Ольхон",
+    "area": 111,
+    "floors": "1 этаж",
+    "bedrooms": 3,
+    "priceFrom": 8000000,
+    "realCost": 8450000,
+    "priceLabel": "от 8 000 000 ₽",
+    "realCostLabel": "8 450 000 ₽",
+    "location": "о. Ольхон, Хужир (референс-объект)",
+    "mapsUrl": "https://yandex.ru/maps/?pt=107.338,53.198&z=12&l=map",
+    "siteUrl": "https://ecodom.glava.pro/projects/olkhon",
+    "photos": [
+      "media/olkhon.jpg"
+    ],
+    "description": "111 м² + терраса 20 м²: 3 спальни, раздельные санузлы, тёплый алюминий.",
+    "review": {
+      "author": "Виктория Л.",
+      "text": "Флагман линейки. Терраса вечером — лучшее место. Приезжайте смотреть по метке.",
+      "rating": 5
+    }
+  }
+]
